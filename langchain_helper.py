@@ -10,9 +10,9 @@ import os
 
 from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env (especially openai api key)
-groq_api_key=os.environ['groq_api_key']
+groq_api_key=os.environ['GROQ_API_KEY']
 # os.environ['groq_api_key']=groq_api_key
-gemini_api_key=os.environ['google_api_key']
+gemini_api_key=os.environ['GOOGLE_API_KEY']
 # Create Google Palm LLM model
 llm=ChatGroq(groq_api_key=groq_api_key,
                 model_name="Gemma-7b-It")
